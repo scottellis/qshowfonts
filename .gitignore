@@ -1,0 +1,5 @@
+qshowfonts
+Makefile
+GeneratedFiles/
+Objects/
+*.user
