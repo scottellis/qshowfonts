@@ -8,6 +8,10 @@ QShowFonts::QShowFonts(QWidget *parent)
 {
 	ui.setupUi(this);
 
+	QFont font;
+	QString s = font.family() + "  :  " + QString::number(font.pointSize());
+	ui.defaultFontEdit->setText(s);
+
 	QFontDatabase db;
 
 	ui.treeWidget->setColumnCount(2);
