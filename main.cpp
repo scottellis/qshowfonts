@@ -3,14 +3,14 @@
 
 int main(int argc, char *argv[])
 {
-	QApplication a(argc, argv);
-	QShowFonts w;
+	QApplication *app = new QApplication(argc, argv);
+	QShowFonts *w = new QShowFonts;
 
 #ifdef Q_OS_LINUX
-	w.showFullScreen();
+	w->showFullScreen();
 #else
-	w.show();
+	w->show();
 #endif
 
-	return a.exec();
+	return app->exec();
 }
